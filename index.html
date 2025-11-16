@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сеновальная Народная Республика — Главный сайт</title>
+<meta name="description" content="Официальный сайт Сеновальной Народной Республики. Величайшая страна за всю историю человечества.">
+<meta name="keywords" content="Сеновалия, СНР, Сеновальная Народная Республика, правительство, новости">
+<meta name="og:title" content="Сеновальная Народная Республика">
+<meta name="og:description" content="Величайшая страна за всю историю человечества.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="gerb.png">
+</head>
+<body>
+<header>
+<div class="container">
+<img src="gerb.png" alt="Герб СНР" class="logo" onclick="window.location.href='index.html'">
+<nav>
+<a href="index.html">Главная</a>
+<a href="news.html">Новости</a>
+<a href="http://mvd.gsnr.me">МВД</a>
+</nav>
+</div>
+</header>
+<main>
+<div class="container">
+<section class="section">
+<img src="flag.png" alt="Флаг Сеновальной Народной Республики" class="flag">
+<h1>Сеновальная Народная Республика</h1>
+<p class="subtitle">Величайшая страна за всю историю человечества</p>
+</section>
+
+<section class="section">
+<h2 class="section-title">Государственная Символика</h2>
+<div class="symbolics">
+<div class="symbol-card">
+<img src="gerb.png" alt="Герб">
+<h3>Герб</h3>
+</div>
+<div class="symbol-card">
+<img src="flag.png" alt="Флаг">
+<h3>Флаг</h3>
+</div>
+<div class="symbol-card">
+<img src="gimn.png" alt="Гимн">
+<h3>Гимн</h3>
+</div>
+</div>
+</section>
+
+<section class="section government-section">
+<h2 class="section-title">Члены правительства</h2>
+
+<div class="president-block">
+<h3 class="parliament-title">Богоизбранный президент Великой Сеновалии</h3>
+<div class="president-info">
+<div class="president-text">
+<h3>Алексей Сеновальный</h3>
+<p>Президент Сеновалии вместе с охраной и гнилой нивой — главной гордости Сеновалии</p>
+</div>
+<div class="president-image">
+<img src="Prezik1.png" alt="Президент Алексей Сеновальный">
+</div>
+</div>
+</div>
+
+<div class="parliament-block">
+<h3 class="parliament-title">Сеновальный парламент</h3>
+<p style="font-size: 14px; margin-bottom: 16px;">Состоит из 5 человек</p>
+<div class="parliament-content">
+<div class="parliament-head">
+<img src="stas.png" alt="Глава парламента">
+<h4>Глава Парламента</h4>
+<p style="font-size: 14px;">Стасян Легенда</p>
+</div>
+<div>
+<p style="font-size: 14px; margin-bottom: 16px;">Партия "Мы Идиоты и Лоботрясы" — главная партия страны</p>
+<div class="parliament-circles">
+<div class="circle" title="Стасик">
+<div class="circle-name">Стасик</div>
+</div>
+<div class="circle" title="Даня">
+<div class="circle-name">Даня</div>
+</div>
+<div class="circle" title="Ваня">
+<div class="circle-name">Ваня</div>
+</div>
+<div class="circle" title="Саня">
+<div class="circle-name">Саня</div>
+</div>
+<div class="circle" title="Таджик">
+<div class="circle-name">Таджик</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="background-color: #f5f5f5; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5; margin-top: 32px;">
+<img src="gleba.png" alt="Глеб" style="width: 100%; max-width: 200px; display: block; margin: 0 auto 16px; border-radius: 8px;">
+<h3 style="text-align: center;">Глеб</h3>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">География страны</h2>
+<div class="geography-block">
+<h3 style="margin-bottom: 16px;">Общие территории страны</h3>
+<img src="territorri.png" alt="Территории страны" style="width: 100%; border-radius: 8px; margin-bottom: 24px;">
+
+<h3 style="margin-bottom: 16px;">Столица великой Сеновалии — Барановка</h3>
+<div class="button-group">
+<button class="btn active" onclick="changeImage('расположение')">Расположение Сеновала</button>
+<button class="btn" onclick="changeImage('океан')">Сеновальный океан</button>
+<button class="btn" onclick="changeImage('внутри')">Вид внутри Сеновала</button>
+</div>
+<img id="geoImage" src="baranovka.png" alt="Барановка" style="width: 100%; border-radius: 8px;">
+</div>
+</section>
+</div>
+</main>
+<footer>
+<div class="container">
+<p>Сеновальная Народная Республика</p>
+<p>Величайшая страна за всю историю человечества</p>
+<p><a href="https://senoval.me">https://senoval.me</a></p>
+</div>
+</footer>
+
+<script>
+function changeImage(type) {
+const geoImage = document.getElementById('geoImage');
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(btn => btn.classList.remove('active'));
+
+if (type === 'расположение') {
+geoImage.src = 'baranovka2.png';
+event.target.classList.add('active');
+} else if (type === 'океан') {
+geoImage.src = 'baranovka3.png';
+event.target.classList.add('active');
+} else if (type === 'внутри') {
+geoImage.src = 'senoval.png';
+event.target.classList.add('active');
+}
+}
+</script>
+</body>
+</html>
